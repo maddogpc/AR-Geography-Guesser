@@ -80,8 +80,7 @@ namespace WPM {
             map.OnProvincePointerUp += (int provinceIndex, int regionIndex) => Debug.Log("Pointer up on province " + map.provinces[provinceIndex].name);
 
             map.OnClick += (sphereLocation, mouseButtonIndex) => {
-                Vector2 latLon = Conversion.GetLatLonFromSpherePoint(sphereLocation);
-                Debug.Log("Clicked on Latitude: " + latLon.x + ", Longitude: " + latLon.y);
+                Score.instance.AddPoint();
             };
 
         }
